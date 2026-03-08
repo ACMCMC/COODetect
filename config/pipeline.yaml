@@ -1,0 +1,47 @@
+seed: 2262
+paths:
+  train_parquet: data/train.parquet
+  test_parquet: data/test.parquet
+  validation_parquet: data/validation.parquet
+  cache_dir: cache
+  models_dir: models
+  x_train_invariant: cache/X_train_invariant.npy
+  x_test_invariant: cache/X_test_invariant.npy
+  x_train_raw: cache/X_train_raw.npy
+  x_test_raw: cache/X_test_raw.npy
+  y_train: cache/y_train.npy
+  train_languages: cache/train_languages.npy
+  test_ids: cache/test_ids.npy
+  safe_features: cache/safe_features.json
+  selected_features: cache/selected_features.json
+  base_train_probs: cache/base_train_probs.npy
+  base_test_probs: cache/base_test_probs.npy
+  test_variance: cache/test_variance.npy
+  test_languages_guesslang: cache/test_languages_guesslang.npy
+  calibration_meta: cache/calibration_meta.json
+  submission: submission.csv
+columns:
+  train_code: code
+  train_label: label
+  train_language: language
+  test_code: code
+  test_id: ID
+  validation_code: code
+  validation_label: label
+  validation_language: language
+processing:
+  n_jobs: 64
+  chunk_parts: 64
+  entropy_bins: 32
+  ks_alpha: 0.01
+  corr_threshold: 0.95
+  variance_drop_percentile: 10
+  xgb_importance_sample: 120000
+  xgb_importance_seed: 2262
+  xgb_gpu_tree_method: hist
+  xgb_device: cuda
+  uncertainty_train_sample: 200000
+  uncertainty_test_sample: 250000
+  inducing_points: 256
+  svgp_epochs: 25
+  svgp_batch_size: 2048

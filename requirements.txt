@@ -1,0 +1,25 @@
+pandas
+numpy
+pyarrow
+joblib
+pyyaml
+scipy
+scikit-learn
+xgboost
+torch
+gpytorch
+tree-sitter
+tree-sitter-c
+tree-sitter-c-sharp
+tree-sitter-cpp
+tree-sitter-go
+tree-sitter-java
+tree-sitter-javascript
+tree-sitter-php
+tree-sitter-python
+tqdm
+# guesslang
+# Install guesslang with --no-deps to avoid installing tensorflow, which is a heavy dependency and not needed for our use case
+# pip install --no-cache guesslang --no-deps
+tensorflow
+plotnine
